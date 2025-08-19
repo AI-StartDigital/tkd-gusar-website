@@ -1,46 +1,64 @@
+<!-- style.css -->
+/* Custom CSS for animations and fonts */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-down {
+    animation: slideDown 0.5s ease-in-out;
+}
+
+/* Base styles for the body and fonts, already in the HTML as well */
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fff;
-  color: #212121;
+    font-family: 'Inter', sans-serif;
 }
 
-header {
-  background: #D32F2F;
-  padding: 1rem;
+/* Hero section specific styles */
+.hero-section {
+    background-image: url('https://placehold.co/1920x1080/0d0c22/ffffff?text=TKD+Gusar+Omiš+-+Trening+i+Natjecanje');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
 }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero {
-  height: 90vh;
-  background: url('hero.jpg') center/cover no-repeat;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.cta {
-  background: #1976D2;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 8px;
-  margin-top: 1rem;
-  font-weight: bold;
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
