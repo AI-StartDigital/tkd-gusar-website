@@ -43,7 +43,7 @@
     animation: slideDown 0.5s ease-in-out;
 }
 
-/* Base styles for the body and fonts, already in the HTML as well */
+/* Base styles for the body and fonts */
 body {
     font-family: 'Inter', sans-serif;
 }
